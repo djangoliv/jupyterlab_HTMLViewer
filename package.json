@@ -1,0 +1,49 @@
+{
+  "name": "HTMLViewer",
+  "version": "0.1.0",
+  "description": "A JupyterLab extension.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/my_name/myextension",
+  "bugs": {
+    "url": "https://github.com/my_name/myextension/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": "logilab",
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my_name/myextension.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "watch": "tsc -w",
+    "prepare": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@jupyterlab/application": "^0.18.5",
+    "@jupyterlab/apputils": "^0.18.4",
+    "@jupyterlab/docmanager": "^0.18.4",
+    "@jupyterlab/docregistry": "^0.18.4",
+    "@jupyterlab/notebook": "^0.18.4",
+    "@phosphor/disposable": "^1.1.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "~2.9.2"
+  },
+  "jupyterlab": {
+    "extension": true
+  }
+}
