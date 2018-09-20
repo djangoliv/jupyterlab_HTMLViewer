@@ -104,7 +104,7 @@ export class HtmlViewer extends Widget {
         if (!cm) {
             return;
         }
-        let url = this.node.baseURI.replace("/lab", "/files/") + this.context.path;
+        let url = this.node.baseURI.replace(/\/lab.*/, "/files/") + this.context.path;
         this._html.setAttribute('src', url);
     }
 
