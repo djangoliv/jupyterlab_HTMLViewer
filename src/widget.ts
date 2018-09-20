@@ -104,7 +104,7 @@ export class HtmlViewer extends Widget {
         if (!cm) {
             return;
         }
-        let url = this.node.baseURI.replace("/lab", "/files/")+ this.context.path;
+        let url = this.node.baseURI.replace("/lab", "/files/") + this.context.path;
         this._html.setAttribute('src', url);
     }
 
@@ -118,14 +118,14 @@ export class HtmlViewer extends Widget {
 export class HtmlViewerFactory extends ABCWidgetFactory<
     IDocumentWidget<HtmlViewer>
     > {
-        /**
-         * Create a new widget given a context.
-         */
-        protected createNewWidget(
-            context: DocumentRegistry.IContext<DocumentRegistry.IModel>
-        ): IDocumentWidget<HtmlViewer> {
-            const content = new HtmlViewer(context);
-            const widget = new DocumentWidget({ content, context });
-            return widget;
-        }
+    /**
+     * Create a new widget given a context.
+     */
+    protected createNewWidget(
+        context: DocumentRegistry.IContext<DocumentRegistry.IModel>
+    ): IDocumentWidget<HtmlViewer> {
+        const content = new HtmlViewer(context);
+        const widget = new DocumentWidget({ content, context });
+        return widget;
     }
+}
