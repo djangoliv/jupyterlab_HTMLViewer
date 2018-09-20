@@ -18,7 +18,7 @@ import {
 /**
  * The list of file types for html.
  */
-const FILE_TYPES = ['html', 'xhtml'];
+const FILE_TYPES = ['html'];
 
 /**
  * The name of the factory that creates html widgets.
@@ -67,6 +67,16 @@ function activate(
         args: widget => ({ path: widget.context.path, factory: FACTORY }),
         name: widget => widget.context.path
     });
+
+    // html filetype
+    app.docRegistry.addFileType(
+        {
+            name: 'html',
+            mimeTypes: ['application/jupyterlab_html'],
+            extensions: ['.html'],
+            iconClass: 'jp-MaterialIcon jp-HTMLIcon'
+        }
+    )
 
     app.docRegistry.addWidgetFactory(factory);
 
